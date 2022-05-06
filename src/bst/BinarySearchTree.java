@@ -157,16 +157,19 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		System.out.println("InOrder test commit");
 	}
 	
-	public void inOrderRecurse(BSTNode<T> node) 
-	{
-		if (node!=null){
-			System.out.println(node);
-			preOrderRecurse(node.leftChild);
-			preOrderRecurse(node.rightChild);
-		}else
-		{
-			return;
-		}
+	public void inOrderRecurse(BSTNode<T> node) {
+		if(node.leftChild != null)
+			inOrderRecurse(node.leftChild);
+		
+		System.out.println(node.data);
+		
+		if(node.rightChild != null)
+			inOrderRecurse(node.rightChild);
+		
+		
+			
+		
+		
 	}
 		
 
